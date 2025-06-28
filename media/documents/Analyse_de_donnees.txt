@@ -1,0 +1,71 @@
+I- Analyse de données 
+objectifs
+comprendre ce qui se passe *
+comprendre ce qui s'est passée
+comprendre ce qui se passera 
+
+II- Quelles sont les variables en jeu 
+type de variable ( quantitative et qualitative)
+type de donnees (quantitative et qualitative)
+
+methodes à utiliser 
+En focntion des questions de recherche 
+	methode supervisée
+	methode non supervisée
+exploratoire ( resumé aà l'aide des tableaux et graphique, calcul des incateurs)
+inferentiel(test d'hypothèse)
+
+IV- Importation des données
+c'est a dire le format des données 
+
+V- Evaluation de la qualité des donnees 
+c'est voir s'il n'y a pas : 
+d'erreur de saisie
+données manquantes
+donnees redondantes
+donnees aberrantes
+donnees incoherentes
+
+mais pour toutes ces donnees on doit pouvoir les identifier et les traiter
+
+V- Analyse des donnees
+description : 
+-numero du tableau 
+-titre : donne l'information sur le tableau
+-les unités de mesures
+- sources : d'où provient les donnees du tableau
+
+les graphiques
+- Numero
+-titre ( graphique et titre des axes)
+- les unités
+- la source
+
+
+VII- Quel type de graphique pour presenter  les données
+pour les variables quantitative (
+histogramme (permet de connaitre la forme de la distribution: symetrique ou asymetrique)
+ boite a moustaches,
+ polygones de frequence)
+
+pour les variables qualitative
+diagramme circulaire
+diagramme à bandes verticaux
+diagramme à bandes horizontaux
+diagramme en anneaux
+diagramme entonnoire
+
+
+deux variables quantitatives 
+nuages de points
+
+une varoble serie temporelle
+courbe d'évolution 
+
+Analyser: Regardez les plus grandes valeurs et les plus petits valeurs
+exemple : la majorité des employés de l'entreprise est masculin ou les hommes sont plus nombreux dans l'entreprise 
+
+Interpreter : Trouvez les raisons qui se cachent derriere les resultats. pourquoi?
+
+Ecrire en du bon francais  ou anglais les resultats d'analyse
+po

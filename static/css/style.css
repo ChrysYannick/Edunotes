@@ -1,0 +1,283 @@
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: Arial, sans-serif;
+     text-decoration: none;
+     list-style: none;
+ }
+
+ 
+.edu{
+     color: rgb(5, 32, 111);
+}
+
+main{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     min-height: 100vh;
+}
+
+section{
+     margin-top: auto;
+}
+
+.container {
+     position: relative;
+     width: 850px;
+     height: 550px;
+     background: #fff;
+     border-radius: 30px;
+     box-shadow: 0 0 30px rgba(0, 0, 0, .2);
+}
+
+/* style login*/
+.login-container {
+     background: white;
+     padding: 30px 40px;
+     border-radius: 15px;
+     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+     width: 500px;
+ }
+ 
+ .login-container h2 {
+     text-align: center;
+     font-size: 30px;
+     color: rgb(5, 32, 111);
+ }
+ 
+ input {
+     width: 100%;
+     padding: 12px;
+     margin: 12px 0;
+     border: 1px solid #ccc;
+     border-radius: 8px;
+     font-size: 1rem;
+ }
+ 
+ button {
+     width: 100%;
+     padding: 12px;
+     background-color: rgb(5, 32, 111);
+     color: white;
+     border: none;
+     border-radius: 8px;
+     font-size: 1rem;
+     font-weight: bold;
+     cursor: pointer;
+     margin-bottom: 10px;
+ }
+ 
+ button:hover {
+     background-color: rgb(5, 32, 111);
+ }
+ 
+ .messages {
+     color: red;
+     font-size: 0.9rem;
+     list-style: none;
+     padding: 0;
+ }
+
+ /* End login */
+
+/* start style register*/
+.register-container {
+     margin: 8%;
+     background: white;
+     padding: 50px 40px;
+     border-radius: 15px;
+     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+     width: 380px;  
+ }
+ 
+ h2 {
+     text-align: center;
+     color:rgb(5, 32, 111);
+     margin-bottom: 20px;
+ }
+ 
+ input, select {
+     width: 100%;
+     padding: 12px;
+     margin: 10px 0;
+     border: 1px solid #ccc;
+     border-radius: 8px;
+     font-size: 1rem;
+ }
+ 
+ button {
+     width: 100%;
+     padding: 12px;
+     background-color:rgb(5, 32, 111);
+     color: white;
+     border: none;
+     border-radius: 8px;
+     font-size: 1rem;
+     font-weight: bold;
+     cursor: pointer;
+     margin-top: 10px;
+ }
+ 
+ button:hover {
+     background-color: #084fc7;
+ }
+ 
+ .messages {
+     color: red;
+     font-size: 0.9rem;
+     list-style: none;
+     padding: 0;
+ }
+
+ .messages .success {
+     color: green;
+ }
+ 
+ .messages .error {
+     color: red;
+ }
+ /* end style register */
+
+
+/* style pour le message l'alert */
+ 
+/* fin du style */
+/*    hero */
+
+.hero{
+     height: 100%;
+     width: 100%;
+     min-height: 100vh;
+     position: relative;
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     align-items: center;
+     gap: 2rem;
+}
+
+.hero-image img{
+     height: auto;
+     width: 600px;
+     transition: transform 0.5s;
+}
+
+
+.hero-image img:hover{
+     transform: scale(1.1);
+}
+
+section {
+     padding: 0 15%;
+}
+
+span{
+     color: var(--icon-color);
+}
+
+
+.hero-text h1{
+     font-size: 50px;
+     font-weight: 600;
+     margin-bottom: 30px;
+}
+
+.hero-text p{
+     font-size: 18px;
+     margin-bottom: 20px;
+}
+
+.hero-text a{
+     display: inline-block;
+     background: rgb(5, 32, 111);
+     color: white;
+     border: 1px solid transparent;
+     padding: 12px 20px;
+     line-height: 1.4;
+     font-size: 16px;
+     font-weight: 600;
+     border-radius: 30px;
+     text-transform: capitalize;
+     transition: all .55s ease;
+}
+
+.hero-text a:hover{
+     background: rgb(3, 48, 170);
+     border: 1px solid white;
+     transform: translateX(5px);
+}
+
+ 
+.hero1 h1{
+     position: relative;
+     text-align: center;
+     margin: 40px 0 20px 0;
+     font-size: 22px;
+     
+}
+ 
+
+
+
+/* style de la partie presentation  presentation */
+
+.hero1 h1{
+     font-size: 34px;
+     text-transform: uppercase;
+}
+
+.hero1 .underline-text{
+     text-decoration: underline;
+     text-decoration-color: rgb(5, 32, 111);
+     text-underline-offset: 5px; /* espace entre le texte et la ligne*/
+     text-decoration-thickness: 5px; /* epaisseur du soulignement */
+     font-size: 2rem;
+     font-weight: bold;
+}
+
+ 
+.flex-container{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 20px;
+}
+
+.left, .right{
+     text-align: center;
+     font-size: 1.2rem;
+     font-weight: bold;
+}
+
+.left h2{
+     margin-bottom: 20px;
+     text-transform: uppercase;
+}
+.left p {
+     margin-bottom: 25px;
+}
+
+.right img{
+     height: 600px;
+     width: 450px;
+     border: 5px solid rgb(5, 32, 111);
+     border-radius: 10px;
+}
+
+.left .btn-univ{
+     font-size: 18px;
+     font-weight: bold;
+     background: rgb(5, 32, 111);
+     width: 60px;
+     padding: 20px;
+     color: white;
+     border-radius: 10px;
+     text-align: center;
+}
+
+
+
+
+ 

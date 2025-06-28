@@ -1,0 +1,54 @@
+{% extends 'base_dashboard.html' %}
+ 
+<main>
+    {% block content %}
+<h1 class="h1">📘 Mes Cours</h1>
+
+{% if documents %}
+<h2 class="h2"> Listes des documents télécharger par l'utilisateur <Span>{{ user.username }}</Span> </h2>
+<table class="cours-table">
+    <thead>
+        <tr>
+            <th>Titre</th>
+            <th>Type du Document</th>
+            <th>Date de telechargement</th>
+            <th>Nombres Téléchargements</th>
+            <th>Supprimer</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for doc in documents %}
+        <tr>
+            <td>{{ doc.title }}</td>
+            <td data-type="{{ doc.get_doc_type_display }}">{{ doc.get_doc_type_display }}</td>
+            <td data-date="{{ doc.uploaded_at|date:'Y-m-d H:i:s' }}">{{ doc.uploaded_at|date:"d/m/Y" }}</td>
+            <td> {{ doc.download_count }} </td>
+            <td>
+                <a href="{% url 'delete_document' doc.pk %}" class="btn-supprimer"
+                   onclick="return confirm('Supprimer ce cours ?')"><i class="ri-delete-bin-fill"></i> Supprimer</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% else %}
+<p>Aucun cours disponible.</p>
+{% endif %}
+{% endblock %}
+
+
+<div class="pagination">
+    {% if documents.has_previous %}
+        <a href="?page=1">« Première</a>
+        <a href="?page={{ documents.previous_page_number }}">‹ Précédente</a>
+    {% endif %}
+
+    <span class="current-page">Page {{ documents.number }} sur {{ documents.paginator.num_pages }}</span>
+
+    {% if documents.has_next %}
+        <a href="?page={{ documents.next_page_number }}">Suivante ›</a>
+        <a href="?page={{ documents.paginator.num_pages }}">Dernière »</a>
+    {% endif %}
+</div>
+</main>
+  

@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{%  load static %}
+
+{% block content %}
+<section class="hero">
+     <div class="hero-text">
+          <h1><span class="edu">Edu</span>Notes</h1>
+          <p>Vos documents se rapprochent de vous. Ayez un accès <br>
+          illimité a vos ressources.</p>
+          <a href="#">Savoir plus <i class="ri-arrow-right-line"></i></a>
+     </div>
+     <div class="hero-image">
+          <img src="{% static 'images/Notes.jpg' %}" alt="images">
+     </div>
+</section>
+
+
+<section class="hero1">
+    <h1 class="underline-text">Présentation</h1>
+    <div class="flex-container">
+        <div class="left">
+            <h2>pourquoi cette plateforme ?</h2>
+            <p>Dans le but de répondre aux exigences des etudiants de l'Université polytechnique de bingerville 
+                par rapport aux difficultés  liés aux archives concernants les documents pedagogiques (cours en pdf, examens, devoir)
+            </p>
+            <a href="https://upb.ci/" class="btn-univ" target="_blank">Notre Université <i class="ri-school-line"></i></a>
+        </div>
+        <div class="right">
+            <img src="{% static 'images/presentation.jpeg' %}" alt="sds">
+        </div>
+    </div>
+</section>
+
+<section class="hero2">
+        
+</section>
+
+        {% endblock %}

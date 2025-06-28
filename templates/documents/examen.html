@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+<main>
+     {% block content %}
+     <div class="doc-container">
+          <h2>📚 Documents (examen) disponibles</h2>
+          <div class="doc-list">
+              {% for doc in documents %}
+                  <div class="doc-card">
+                      <h3>{{ doc.title }}</h3>
+                      <hr><br>
+                      <div class="icon">
+                        <img src="{% static 'images/upb.jpg' %}" alt="PDF Icon" style="width: 40px; height: 40px; margin-right: 12px;">
+                        <img src="{% static 'images/pdf.png' %}" alt="PDF Icon" style="width: 40px; height: 40px; margin-right: 12px;">
+                      </div>
+                      
+
+
+                      <p><strong>Type :</strong> {{ doc.get_doc_type_display }}</p>
+                      <p><strong>Description :</strong> {{ doc.description|default:"Aucune description" }}</p>
+                      <p><strong>Déposé par :</strong> {{ doc.uploaded_by.username }}</p>
+                      <p><strong>Date :</strong> {{ doc.uploaded_at|date:"d/m/Y H:i" }}</p>
+                      <a href="{% url 'download_document' doc.id %}" class="btn"><i class='bx bxs-download'></i> Télécharger</a>
+                      <a href="{% url 'student_dashboard' %}" class="btn1">Dashborad</a>
+                  </div>
+              {% empty %}
+                  <p>Aucun document trouvé.</p>
+              {% endfor %}
+          </div>
+      </div>
+     {% endblock %}
+</main>

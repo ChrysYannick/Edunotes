@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+{%  load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ============== CSS ================= -->
+    <link rel="stylesheet" href="{% static  'css/style.css' %}">
+    <link rel="stylesheet" href="{% static  'css/navbar.css' %}">
+    <link rel="stylesheet" href="{% static  'css/loader.css' %}">
+    <link rel="stylesheet" href="{% static  'css/style_doc.css' %}"> 
+    <!-- =============== js ================= -->
+    <!--<script src="{% static 'js/auto_disparition.js' %}" defer></script> -->
+
+    <!-- ============== Boxicons ================= -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- ============== Remixicons ================= -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+
+    <title>EduNotes</title>
+</head>
+<body>
+    <div id="loader" class="loader"></div>
+    <!--=============== HEADER ===============-->
+    <div id="page-content" class="hidden">
+        <header class="header">
+            <nav>
+                <div class="logo"> <img src="{% static 'images/upb.jpg' %}" alt=""><span>Edu</span>Notes</div>
+                <div class="nav-links">
+                    <a href="/" class="with-loader">Accueil</a>
+                    <div class="dropdown">
+                        <a href="#">Documents ▾</a>
+                        <div class="dropdown-content">
+                          <a href="{% url 'cours' %}">Cours</a>
+                          <a href="{% url 'devoir' %}">Devoirs</a>
+                          <a href="{% url 'examen' %}">Examens</a>
+                        </div>
+                      </div>
+                    <a href="{% url 'discussion_room' room_name='general' %}">Discussions</a>
+                </div>
+                <div class="auth-buttons"> 
+                    {% if user.is_authenticated %}
+                     <a href="{% url 'logout' %}" class="with-loader">Se déconnecter</a>
+                    {% else %}
+                    <a href="{% url 'login' %}" class="with-loader">Se connecter</a>
+                    <a href="{% url 'register' %}" class="with-loader">S'enregistrer</a>
+                    {% endif %}
+                </div>
+            </nav>
+         </header>
+        <main>
+            {% block content %}
+    
+            {% endblock %}
+        </main>
+    </div>
+    
+        <!-- ============ js =============== -->
+        <script src="{% static  'js/loader.js' %}"></script>
+    </body>
+</html>

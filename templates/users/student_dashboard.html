@@ -1,0 +1,35 @@
+{% extends 'base_dashboard.html' %}
+ 
+{% block content %}
+<div class="dashboard">
+     <h2 class="titre">Bienvenue {{ user.username }} 👋</h2>
+     <div class="card-container">
+          <div class="card un">
+               <h2><i class="ri-book-fill"></i> Mes Cours</h2>
+               <p>Total des cours téléchargés :</p>
+               <p  class="numero"> {{ cours_count }} </p>    
+               <a class="btn-special" href="{% url 'student_cours' %}">Accéder</a>
+               <a class="btn-special2" href="{% url 'home' %}">Acceuil</a>
+
+           </div>
+           
+           <div class="card deux">
+               <h2><i class="ri-pencil-fill"></i> Mes Devoirs</h2>
+               <p>Total des devoirs téléchargés :</p>
+               <p class="numero">{{ devoir_count }}</p>
+               <a class="btn-special" href="{% url 'student_devoirs' %}">Accéder</a>
+               <a class="btn-special2" href="{% url 'home' %}">Acceuil</a>
+           </div>
+          
+           <div class="card trois">
+               <h2><i class="ri-file-list-3-fill"></i> Mes Examens</h2>
+               <p>Total des examens téléchargés :</p>
+               <p class="numero"> {{ examen_count }} </p>
+               <a  class="btn-special" href="{% url 'student_examens' %}">Accéder</a>
+               <a class="btn-special2" href="{% url 'home' %}">Acceuil</a>
+
+           </div>
+           
+     </div>
+     </div>
+{% endblock %}
